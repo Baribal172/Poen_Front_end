@@ -4,9 +4,9 @@ In the project directory, you can run:
 
 ### `npm i`
 
-To install all the packages NPM and Node Required
-Download NPM here:(https://www.npmjs.com/)
-Download Node here:(https://nodejs.org/en/)
+To install all the packages NPM and Node Required \
+Download NPM here:(https://www.npmjs.com/) \
+Download Node here:(https://nodejs.org/en/) \
 
 ### `npm start`
 
