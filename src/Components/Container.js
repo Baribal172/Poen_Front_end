@@ -1,12 +1,12 @@
 const divStyle = {
-    maxWith: '335px',
     marginLeft: '20px',
+    marginRight: '20px',
 }
 
-const Container = () => {
+const Container = ({children}) => {
     return ( 
         <div style={divStyle}>
-
+            {children}
         </div>
      );
 }
