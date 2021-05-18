@@ -18,6 +18,10 @@ import UpdateProfile from "../src/Components/UpdateProfile";
 import { AuthProvider } from "../src/contexts/AuthContext";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import GenderPage from "./Pages/GenderPage";
+import AgePage from "./Pages/AgePage";
+import HousingPage from "./Pages/HousingPage";
+import SavingPage from "./Pages/SavingPage";
+import DataPage from "./Pages/DataPage";
 function App() {
 	return (
 		<div className='App'>
@@ -44,6 +48,10 @@ function App() {
 						<PrivateRoute exact path='/tips' component={TipsPage} />
 						<PrivateRoute exact path='/intro' component={Intro} />
 						<PrivateRoute exact path='/gender' component={GenderPage} />
+						<PrivateRoute exact path='/age' component={AgePage} />
+						<PrivateRoute exact path='/housing' component={HousingPage} />
+						<PrivateRoute exact path='/saving' component={SavingPage} />
+						<PrivateRoute exact path='/data' component={DataPage} />
 						<Route path='/register' component={Register}></Route>
 						<Route path='/login' component={Login}></Route>
 						<PrivateRoute exact path='/bankLinken' component={BankLinken} />

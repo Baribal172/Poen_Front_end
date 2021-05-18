@@ -2,7 +2,7 @@ const GenderCard = ({ gender, genderLabel, color}) => {
     return ( 
         <div className="card">
         <div className="cardContent">
-            <img className="logo" src={gender}/>
+            <img className="icon" src={gender}/>
             <p className="genderLabel">{genderLabel}</p>
         </div>
         <style jsx>{`
@@ -25,7 +25,7 @@ const GenderCard = ({ gender, genderLabel, color}) => {
             align-items: center;
         }
 
-        .logo {
+        .icon {
             object-fit: cover;
             height: 50px;
         }
