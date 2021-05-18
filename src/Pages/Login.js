@@ -2,7 +2,6 @@ import Button from "../Components/Button";
 import Container from "../Components/Container";
 import OutlineInput from "../Components/OutlineInput";
 import TextLink from "../Components/TextLink";
-import TitleWhite from "../Components/TitleWhite";
 import Login from "../Components/Login";
 const divStyle = {
 	position: "absolute",

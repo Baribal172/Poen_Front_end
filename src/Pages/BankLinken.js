@@ -1,9 +1,9 @@
 import Container from "../Components/Container";
-import TextWhite from "../Components/TextWhite";
+import TextWhite from "../Components/PrimaryText";
 import Button from '../Components/Button';
 import OutlineButton from "../Components/OutlineButton";
 import { Link } from "react-router-dom";
-import TitleWhite from "../Components/TitleWhite";
+import PrimaryTitle from "../Components/PrimaryTitle";
 import OutlineInput from "../Components/OutlineInput";
 
 
@@ -26,7 +26,7 @@ const BankLinken = () => {
             <div style={imgStyle}>
                   <img src="/bank-link-icon.png" />
             </div>
-                  <TitleWhite title="Koppel je bankrekening" />
+                  <PrimaryTitle title="Koppel je bankrekening" color="#fff" />
                   <OutlineInput
                   inputLabel="Bank"
                   type="text"

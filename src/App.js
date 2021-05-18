@@ -17,6 +17,7 @@ import ForgotPassword from "./Components/ForgotPassword";
 import UpdateProfile from "../src/Components/UpdateProfile";
 import { AuthProvider } from "../src/contexts/AuthContext";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import GenderPage from "./Pages/GenderPage";
 function App() {
 	return (
 		<div className='App'>
@@ -42,6 +43,7 @@ function App() {
 						<PrivateRoute exact path='/settings' component={SettingsPage} />
 						<PrivateRoute exact path='/tips' component={TipsPage} />
 						<PrivateRoute exact path='/intro' component={Intro} />
+						<PrivateRoute exact path='/gender' component={GenderPage} />
 						<Route path='/register' component={Register}></Route>
 						<Route path='/login' component={Login}></Route>
 						<PrivateRoute exact path='/bankLinken' component={BankLinken} />
