@@ -3,6 +3,7 @@ import Container from "../Components/Container";
 import OutlineInput from "../Components/OutlineInput";
 import TextLink from "../Components/TextLink";
 import Login from "../Components/Login";
+import LayoutBlue from "../Components/LayoutBlue";
 const divStyle = {
 	position: "absolute",
 	bottom: "0",
@@ -20,7 +21,16 @@ const inputStyle = {
 
 const Inloggen = () => {
 	return (
+		<LayoutBlue>
 		<Login></Login>
+		
+		<style jsx>{`
+		.background {
+			height: 100%;
+			background-color: #006FFF;
+		}
+		`}</style>
+		</LayoutBlue>
 		// <Container>
 		// 	<div style={divStyle1}>
 		// 		<TitleWhite title='Welkom terug' />
