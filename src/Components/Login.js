@@ -30,26 +30,37 @@ export default function Login() {
 	}
 
 	return (
-		
 		<Container>
 			<Card>
 				<Card.Body>
-					<PrimaryTitle title="Log in" color="#fff" />
+					<PrimaryTitle title='Log in' color='#fff' />
 					{error && <Alert variant='danger'>{error}</Alert>}
 					<Form onSubmit={handleSubmit}>
 						<Form.Group id='email'>
-							<div className="formStyle">
-								<Form.Label className="labelStyle" >Email</Form.Label>
-								<Form.Control className="inputStyle" type='email' ref={emailRef} required />
+							<div className='formStyle'>
+								<Form.Label className='labelStyle'>Email</Form.Label>
+								<Form.Control
+									className='inputStyle'
+									type='email'
+									ref={emailRef}
+									required
+								/>
 							</div>
 						</Form.Group>
 						<Form.Group id='password'>
-							<div className="formStyle">
-								<Form.Label className="labelStyle">Password</Form.Label>
-								<Form.Control className="inputStyle" type='password' ref={passwordRef} required />
+							<div className='formStyle'>
+								<Form.Label className='labelStyle'>Password</Form.Label>
+								<Form.Control
+									className='inputStyle'
+									type='password'
+									ref={passwordRef}
+									required
+								/>
 							</div>
 						</Form.Group>
-						
+						<Button disabled={loading} className='btnLogin' type='submit'>
+							Log In
+						</Button>
 					</Form>
 					<div className='w-100 text-center mt-3'>
 						<Link to='/forgot-password'>Forgot Password?</Link>
@@ -59,63 +70,55 @@ export default function Login() {
 			<TextLink
 				text='Nog geen account? '
 				link='/Register'
-		 		linkLabel='Registreer'
+				linkLabel='Registreer'
 			/>
-			<Button disabled={loading} className='btnLogin' type='submit'>
-				Log In
-			</Button>
-			
-			
+
 			<style jsx>{`
-			
+				.formStyle {
+					width: 100%;
+					height: 60px;
+					color: #fff;
+					border: 2px solid #fff;
+					border-radius: 10px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding: 20px;
+					margin-bottom: 13px;
+				}
 
-			.formStyle {
-				width: 100%;
-				height: 60px;
-				color: #fff;
-				border: 2px solid #fff;
-				border-radius: 10px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				padding: 20px;
-				margin-bottom: 13px;
-			}
+				.labelStyle {
+					margin-bottom: 5px;
+				}
 
-			.labelStyle {
-				margin-bottom: 5px;
-			}
+				.inputStyle {
+					width: 100%;
+					color: #fff;
+					background-color: rgba(201, 76, 76, 0);
+					border: none;
+					border-bottom: 1px solid #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
 
-			.inputStyle {
-				width: 100%;
-				color: #fff;
-				background-color: rgba(201, 76, 76, 0);
-				border: none;
-				border-bottom: 1px solid #fff;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.btnLogin {
-				position: absolute;
-				bottom: 0;
-				right: 20px;
-				left: 20px;
-				width: 335px;
-				height: 60px;
-				color: #006FFF;
-				background-color: #fff;
-				border-radius: 10px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin-bottom: 20px;
-				border: none;
-			}
-
+				.btnLogin {
+					position: absolute;
+					bottom: 0;
+					right: 20px;
+					left: 20px;
+					width: 335px;
+					height: 60px;
+					color: #006fff;
+					background-color: #fff;
+					border-radius: 10px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-bottom: 20px;
+					border: none;
+				}
 			`}</style>
-		
 		</Container>
 	);
 }
