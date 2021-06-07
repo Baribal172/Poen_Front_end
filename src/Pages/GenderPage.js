@@ -9,12 +9,22 @@ const GenderPage = () => {
     return (
         <Layout>
         <Container>
+            
             <PrimaryTitle title="Wat is je geslacht?" color="#2F3031" />
             <PrimaryText text="Om een beter beeld te krijgen over jongeren hun budgetteringen hebben wij je geslacht nodig." color="#2F3031" />
-            <GenderCard gender="/manIcon.svg" genderLabel="Man" color="#006FFF"/>
-            <GenderCard gender="/vrouwIcon.svg" genderLabel="Vrouw" color="#FF2266"/>
+            <div className="grid">
+                <GenderCard gender="/manIcon.svg" genderLabel="Man" color="#006FFF"/>
+                <GenderCard gender="/vrouwIcon.svg" genderLabel="Vrouw" color="#FF2266"/>
+            </div>
             <ArrowButtonNext link="/age" />
         </Container>
+        <style jsx>{`
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20.5px;
+        }
+        `}</style>
         </Layout>
      );
 }
