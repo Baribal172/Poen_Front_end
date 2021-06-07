@@ -6,6 +6,7 @@ const LayoutBlue = ({children}) => {
         <style jsx>{`
         .layout {
             background-color: #006FFF;
+            height: 100%;
         }
         `}</style>
         </div>

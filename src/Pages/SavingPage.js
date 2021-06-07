@@ -16,7 +16,7 @@ const SavingPage = () => {
                     <CardCategorie icon="/brommerIcon.svg" categorieName="Brommer" />
                     <CardCategorie icon="/autoIcon.svg" categorieName="Auto" />
                     <CardCategorie icon="/reizenIcon.svg" categorieName="Reizen" />
-                    <CardCategorie icon="/uitgaanIcon.svg" categorieName="Uitgaan" />
+                    <CardCategorie icon="/uitgaan.svg" categorieName="Uitgaan" />
                     <CardCategorie icon="/hobbyIcon.svg" categorieName="Hobby" />
                     <CardCategorie icon="/multimediaIcon.svg" categorieName="Multimedia" />
                     <CardCategorie icon="/kledingIcon.svg" categorieName="Kleding" />
