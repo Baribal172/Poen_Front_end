@@ -7,11 +7,12 @@ import Card from "react-bootstrap/Card";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import WhiteText from "../Components/WhiteText";
+import "bootstrap/dist/css/bootstrap.css";
+
 export default function Home() {
 	const [error, setError] = useState("");
 	const { currentUser, logout } = useAuth();
 	const history = useHistory();
-
 	async function handleLogout() {
 		setError("");
 
@@ -28,14 +29,15 @@ export default function Home() {
 			<h3>Bespaarde geld</h3>
 			<p>$675,00</p>
 			<Card>
-				<Card.Header as='h5'>Featured</Card.Header>
 				<Card.Body>
-					<Card.Title>Special title treatment</Card.Title>
+					<Card.Title>Volkswagen Golf</Card.Title>
+					<Card.Img variant='top' src='holder.js/100px180' />
 					<Card.Text>
 						With supporting text below as a natural lead-in to additional
 						content.
 					</Card.Text>
-					<Button variant='primary'>Go somewhere</Button>
+					<Button variant='light'>Doel: 2500</Button>
+					<Button variant='primary'>Gespaard: 300</Button>
 				</Card.Body>
 			</Card>
 			<Button variant='link' onClick={handleLogout}>
