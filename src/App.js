@@ -13,7 +13,7 @@ import PrivateRoute from "./Components/PrivateRoute";
 import Register from "./Pages/Register.js";
 import Login from "./Pages/Login.js";
 import BankLinken from "./Pages/BankLinken";
-import ForgotPassword from "./Components/ForgotPassword";
+import ForgotPassword from "./Pages/ForgotPassword";
 import UpdateProfile from "../src/Components/UpdateProfile";
 import { AuthProvider } from "../src/contexts/AuthContext";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
