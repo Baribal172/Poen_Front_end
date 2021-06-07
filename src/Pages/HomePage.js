@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import WhiteText from "../Components/WhiteText";
-import "bootstrap/dist/css/bootstrap.css";
 
 export default function Home() {
 	const [error, setError] = useState("");

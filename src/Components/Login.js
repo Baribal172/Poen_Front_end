@@ -33,7 +33,7 @@ export default function Login() {
 		<Container>
 			<Card>
 				<Card.Body>
-					<PrimaryTitle title='Log in' color='#fff' />
+					<PrimaryTitle title='Welkom terug.' color='#fff' />
 					{error && <Alert variant='danger'>{error}</Alert>}
 					<Form onSubmit={handleSubmit}>
 						<Form.Group id='email'>
@@ -62,8 +62,8 @@ export default function Login() {
 							Log In
 						</Button>
 					</Form>
-					<div className='w-100 text-center mt-3'>
-						<Link to='/forgot-password'>Forgot Password?</Link>
+					<div className='wachtwoord'>
+						<Link to='/forgot-password'>Wachtwoord vergeten?</Link>
 					</div>
 				</Card.Body>
 			</Card>
@@ -117,6 +117,12 @@ export default function Login() {
 					align-items: center;
 					margin-bottom: 20px;
 					border: none;
+				}
+
+				.wachtwoord {
+					color: #FFFFFF;
+					display: flex;
+					align-content: flex-end;
 				}
 			`}</style>
 		</Container>

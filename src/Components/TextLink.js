@@ -2,7 +2,9 @@ import { Link } from "react-router-dom"
 
 const divStyle = {
     color: '#fff',
-    marginBottom: '10px',
+    position: 'absolute',
+    bottom: '95px',
+    left: '80px',
     display: 'flex',
     justifyContent: 'center',
 }

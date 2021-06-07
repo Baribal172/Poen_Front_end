@@ -4,6 +4,8 @@ import OutlineInput from "../Components/OutlineInput";
 import TextLink from "../Components/TextLink";
 import Login from "../Components/Login";
 import LayoutBlue from "../Components/LayoutBlue";
+import "../styles/blueBg.css";
+
 const divStyle = {
 	position: "absolute",
 	bottom: "0",
