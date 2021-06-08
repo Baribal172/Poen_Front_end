@@ -15,9 +15,28 @@ const divStyle = {
 const Button = ({ link, btnLabel}) => {
     return ( 
         <Link to={link}>
-        <div style={divStyle}>
+        <div className="divStyle">
             <a>{btnLabel}</a>
         </div>
+        <style jsx>{`
+            .divStyle {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                left: 20px;
+                width: 335px;
+                height: 60px;
+                color: #006fff;
+                background-color: #fff;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                border: none;
+            }
+
+		`}</style>
         </Link>
      );
 }

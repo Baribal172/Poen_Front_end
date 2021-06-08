@@ -13,7 +13,7 @@ import PageTitle from "../Components/PageTitle";
 import TargetButton from "../Components/TargetButton";
 import TargetCard from "../Components/TargetCard";
 import BudgetCard from "../Components/BudgetCard";
-import FinanceDate from "../Components/FinanceData";
+import FinanceData from "../Components/FinanceData";
 
 export default function Home() {
 	const [error, setError] = useState("");
@@ -56,7 +56,7 @@ export default function Home() {
 			
 			
 		</Container>
-		<FinanceDate
+		<FinanceData
 		uitgaven="€154,00"
 		overig="€421,00"
 		/>
