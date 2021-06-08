@@ -8,6 +8,7 @@ const Balans = ({balans}) => {
         <style jsx>{`
 			.flex {
                 margin-top: 30px;
+                margin-bottom: 20px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -27,6 +28,7 @@ const Balans = ({balans}) => {
                 justify-content: center;
                 align-items: center;
                 color: #fff;
+                font-size: 18px;
             }
 		`}</style>
         </div>

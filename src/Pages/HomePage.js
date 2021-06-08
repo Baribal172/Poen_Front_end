@@ -10,6 +10,10 @@ import WhiteText from "../Components/WhiteText";
 import Nav from "../Components/Nav";
 import Balans from "../Components/Balans";
 import PageTitle from "../Components/PageTitle";
+import TargetButton from "../Components/TargetButton";
+import TargetCard from "../Components/TargetCard";
+import BudgetCard from "../Components/BudgetCard";
+import FinanceDate from "../Components/FinanceData";
 
 export default function Home() {
 	const [error, setError] = useState("");
@@ -27,30 +31,38 @@ export default function Home() {
 	}
 
 	return (
+		<>
 		<Container>
 			<PageTitle
 				title="Home"
 			/>
 			<Nav/>
 			<Balans 
-				balans="$675,00"
+				balans="€656,00"
 			/>
+			<TargetButton
+				btnLabel="Nieuw doel" />
+			<TargetCard
+				target="Volkswagen golf"
+				image="/volkswagen-golf.png"
+				gespaard="€1875,00"
+				doel="€2500,00"			
+			/>
+			<BudgetCard 
+				budget="€575,00"
+				budgetInfo="Is je huidig ingestelde budget."
+			/>
+
 			
-			<Card>
-				<Card.Body>
-					<Card.Title>Volkswagen Golf</Card.Title>
-					<Card.Img variant='top' src='holder.js/100px180' />
-					<Card.Text>
-						With supporting text below as a natural lead-in to additional
-						content.
-					</Card.Text>
-					<Button variant='light'>Doel: 2500</Button>
-					<Button variant='primary'>Gespaard: 300</Button>
-				</Card.Body>
-			</Card>
-			<Button variant='link' onClick={handleLogout}>
+			
+		</Container>
+		<FinanceDate
+		uitgaven="€154,00"
+		overig="€421,00"
+		/>
+		<Button variant='link' onClick={handleLogout}>
 				Log Out
 			</Button>
-		</Container>
+		</>
 	);
 }
