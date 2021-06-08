@@ -38,6 +38,7 @@ export default function Home() {
 			/>
 			<Nav/>
 			<Balans 
+				infoBalans="gespaard geld"
 				balans="€656,00"
 			/>
 			<TargetButton

@@ -23,6 +23,7 @@ import HousingPage from "./Pages/HousingPage";
 import SavingPage from "./Pages/SavingPage";
 import DataPage from "./Pages/DataPage";
 import DoelInstellen from "./Pages/DoelInstellen";
+import BudgetInstellen from "./Pages/BudgetInstellen";
 function App() {
 	return (
 		<div className='App'>
@@ -54,6 +55,7 @@ function App() {
 						<PrivateRoute exact path='/saving' component={SavingPage} />
 						<PrivateRoute exact path='/data' component={DataPage} />
 						<PrivateRoute exact path='/doelInstellen' component={DoelInstellen} />
+						<PrivateRoute exact path='/budgetInstellen' component={BudgetInstellen} />
 						<Route path='/register' component={Register}></Route>
 						<Route path='/login' component={Login}></Route>
 						<PrivateRoute exact path='/bankLinken' component={BankLinken} />

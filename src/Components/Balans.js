@@ -1,7 +1,7 @@
-const Balans = ({balans}) => {
+const Balans = ({infoBalans, balans}) => {
     return ( 
         <div className="flex">
-        <h2>Gespaard geld</h2>
+        <h2>{infoBalans}</h2>
         <div className="balans">
             <p>{balans}</p>
         </div>
