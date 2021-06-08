@@ -7,6 +7,9 @@ import Card from "react-bootstrap/Card";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import WhiteText from "../Components/WhiteText";
+import Nav from "../Components/Nav";
+import Balans from "../Components/Balans";
+import PageTitle from "../Components/PageTitle";
 
 export default function Home() {
 	const [error, setError] = useState("");
@@ -25,8 +28,14 @@ export default function Home() {
 
 	return (
 		<Container>
-			<h3>Bespaarde geld</h3>
-			<p>$675,00</p>
+			<PageTitle
+				title="Home"
+			/>
+			<Nav/>
+			<Balans 
+				balans="$675,00"
+			/>
+			
 			<Card>
 				<Card.Body>
 					<Card.Title>Volkswagen Golf</Card.Title>

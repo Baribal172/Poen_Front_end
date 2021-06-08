@@ -5,6 +5,7 @@ import ArrowButtonPrev from "../Components/ArrowButtonPrev";
 import PrimaryText from "../Components/PrimaryText";
 import PrimaryTitle from "../Components/PrimaryTitle";
 import DataCard from "../Components/DataCard";
+import "../styles/global.css";
 
 const DataPage = () => {
     return (

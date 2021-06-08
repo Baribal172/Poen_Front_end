@@ -2,9 +2,17 @@ import Container from "./Container";
 
 const Nav = () => {
     return ( 
-        <Container>
-            
-        </Container>
+        <div className="nav">
+            <img src="/menu.png" />
+        
+        <style jsx>{`
+            .nav {
+                display: inline-flex;
+                float: right;
+                margin-top: 10px;
+            }
+        `}</style>
+        </div>
      );
 }
  

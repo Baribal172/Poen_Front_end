@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import PrimaryTitle from "../Components/PrimaryTitle";
 import PrimaryText from "../Components/PrimaryText";
 import Container from "../Components/Container";
+import Nav from "../Components/Nav";
 
 export default function ForgotPassword() {
 	const emailRef = useRef();
