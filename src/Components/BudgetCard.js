@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const BudgetCard = ({ budget, budgetInfo}) => {
     return ( 
+        <Link to="/budgetInstellen" >
         <div className="budgetCard">
             <div className="icon">
                 <img src="/bagIcon.png" />
@@ -24,6 +27,7 @@ const BudgetCard = ({ budget, budgetInfo}) => {
                 }
 			`}</style>
         </div>
+        </Link>
      );
 }
  

@@ -37,7 +37,8 @@ const DoelInstellen = () => {
             
         </Container>
         <AdviesBalk 
-            advies="€150,00"
+            bedrag="€150,00"
+            advies="Maandelijkse opzij zetten"
         />
         <div className="advies">
         </div>
@@ -59,21 +60,6 @@ const DoelInstellen = () => {
                 background-color: #006FFF;
                 height: 50vh;
             }
-
-            .btnOpslaan {
-					position: absolute;
-					bottom: 0;
-					right: 20px;
-					left: 20px;
-					background-color: #fff;
-					border-radius: 10px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin-bottom: 20px;
-					border: none;
-				}
-
 		`}</style>
         </>
      );

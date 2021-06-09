@@ -1,8 +1,8 @@
-const AdviesBalk = ({advies}) => {
+const AdviesBalk = ({ bedrag, advies}) => {
     return ( 
         <div className="adviesBalk">
-            <h1>{advies}</h1>
-            <p className="adviesBold">Maandelijks opzij zetten</p>
+            <h1>{bedrag}</h1>
+            <p className="adviesBold">{advies}</p>
             <style jsx>{`
 			.adviesBalk {
                 background-color: #FFF;

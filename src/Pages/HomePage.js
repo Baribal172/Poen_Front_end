@@ -14,6 +14,7 @@ import TargetButton from "../Components/TargetButton";
 import TargetCard from "../Components/TargetCard";
 import BudgetCard from "../Components/BudgetCard";
 import FinanceData from "../Components/FinanceData";
+import TransactieCard from "../Components/TransactieCard";
 
 export default function Home() {
 	const [error, setError] = useState("");
@@ -61,9 +62,37 @@ export default function Home() {
 		uitgaven="€154,00"
 		overig="€421,00"
 		/>
+		
+		<div className="advies">
+			<Container>
+				<TransactieCard 
+				transactie="Winkelen"
+				kosten="€86,00"
+				/>
+
+				<TransactieCard 
+				transactie="Eten"
+				kosten="€43,00"
+				/>
+
+				<TransactieCard 
+				transactie="Roken"
+				kosten="€25,00"
+				/>
+
+			</Container>
+        </div>
+		{/*
 		<Button variant='link' onClick={handleLogout}>
-				Log Out
-			</Button>
+			Log Out
+		</Button> */}
+		<style jsx>{`
+            .advies {
+				padding-top: 20px;
+                background-color: #006FFF;
+                height: 50vh;
+            }
+		`}</style>
 		</>
 	);
 }

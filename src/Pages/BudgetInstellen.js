@@ -1,4 +1,6 @@
+import AdviesBalk from "../Components/AdviesBalk";
 import Balans from "../Components/Balans";
+import Button from "../Components/Button";
 import CardCategorie from "../Components/CardCategorie";
 import Container from "../Components/Container";
 import Nav from "../Components/Nav";
@@ -19,13 +21,28 @@ const BudgetInstellen = () => {
                 balans="€575,00"
             />
             <div className="grid">      
-                <CardCategorie icon="/brommerIcon.svg" categorieName="Eten" />
-                <CardCategorie icon="/brommerIcon.svg" categorieName="Winkelen" />
-                <CardCategorie icon="/brommerIcon.svg" categorieName="Drinken" />
+                <CardCategorie icon="/etenIcon.svg" categorieName="Eten" />
+                <CardCategorie icon="/winkelenIcon.svg" categorieName="Winkelen" />
+                <CardCategorie icon="/drinkenIcon.svg" categorieName="Drinken" />
                 <CardCategorie icon="/brommerIcon.svg" categorieName="Uitgaan" />
-                <CardCategorie icon="/brommerIcon.svg" categorieName="Roken" />
-                <CardCategorie icon="/brommerIcon.svg" categorieName="Feesten" />
+                <CardCategorie icon="/rokenIcon.svg" categorieName="Roken" />
+                <CardCategorie icon="/cafeIcon.svg" categorieName="Cafe" />
             </div>
+        </Container>
+        <AdviesBalk
+            bedrag="€150,00"
+            advies="Winkelen"
+        />
+        <div className="advies">
+        </div>
+        <Container>
+            
+
+            
+            <Button
+                btnLabel="Opslaan"
+                link="/"
+            />
         </Container>
         <style jsx>{`
         .grid {
@@ -34,6 +51,11 @@ const BudgetInstellen = () => {
             column-gap: 34px;
             row-gap: 25px;
         }
+
+        .advies {
+                background-color: #006FFF;
+                height: 38vh;
+            }
         `}</style>
         
         
