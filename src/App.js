@@ -30,7 +30,6 @@ function App() {
 			<AuthProvider>
 				<Router>
 					<Link to='/'>Home</Link>
-					<Link to='/about'>About</Link>
 					<Link to='/profile'>Profiel</Link>
 					<Link to='/goals'>Doelen</Link>
 					<Link to='/budget'>Budget</Link>
@@ -43,7 +42,6 @@ function App() {
 							path='/update-profile'
 							component={UpdateProfile}
 						/>
-						<PrivateRoute exact path='/about' component={AboutPage} />
 						<PrivateRoute exact path='/goals' component={GoalsPage} />
 						<PrivateRoute exact path='/budget' component={BudgetPage} />
 						<PrivateRoute exact path='/settings' component={SettingsPage} />
