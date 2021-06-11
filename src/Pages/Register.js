@@ -6,7 +6,9 @@ import PrimaryTitle from "../Components/PrimaryTitle";
 import PrimaryText from "../Components/PrimaryText";
 import Container from "../Components/Container";
 import TextLink from "../Components/TextLink";
-
+import firebase from "../firebase";
+import { auth } from "../firebase";
+import "firebase/firestore";
 export default function Signup() {
 	const emailRef = useRef();
 	const passwordRef = useRef();
@@ -26,10 +28,18 @@ export default function Signup() {
 		try {
 			setError("");
 			setLoading(true);
-			await signup(emailRef.current.value, passwordRef.current.value);
+			const db = firebase.firestore();
+			await signup(emailRef.current.value, passwordRef.current.value).then(
+				(cred) => {
+					return db.collection("users").doc(cred.user.uid).set({
+						email: emailRef.current.value,
+					});
+				}
+			);
 			history.push("/");
-		} catch {
-			setError("Failed to create an account");
+		} catch (error) {
+			console.log(error);
+			setError("Failed to create an account", error);
 		}
 
 		setLoading(false);
@@ -39,26 +49,46 @@ export default function Signup() {
 		<Container>
 			<Card>
 				<Card.Body>
-					<PrimaryTitle title="Welkom." color="#fff" />
-					<PrimaryText text="Maak je nieuwe account aan en start met het plannen van je budget!" color="#fff"/>
+					<PrimaryTitle title='Welkom.' color='#fff' />
+					<PrimaryText
+						text='Maak je nieuwe account aan en start met het plannen van je budget!'
+						color='#fff'
+					/>
 					{error && <Alert variant='danger'>{error}</Alert>}
 					<Form onSubmit={handleSubmit}>
 						<Form.Group id='email'>
 							<div className='formStyle'>
 								<Form.Label className='labelStyle'>Email</Form.Label>
-								<Form.Control className='inputStyle' type='email' ref={emailRef} required />
+								<Form.Control
+									className='inputStyle'
+									type='email'
+									ref={emailRef}
+									required
+								/>
 							</div>
 						</Form.Group>
 						<Form.Group id='password'>
 							<div className='formStyle'>
 								<Form.Label className='labelStyle'>Wachtwoord</Form.Label>
-								<Form.Control className='inputStyle' type='password' ref={passwordRef} required />
+								<Form.Control
+									className='inputStyle'
+									type='password'
+									ref={passwordRef}
+									required
+								/>
 							</div>
 						</Form.Group>
 						<Form.Group id='password-confirm'>
 							<div className='formStyle'>
-								<Form.Label className='labelStyle'>Bevestig wachtwoord</Form.Label>
-								<Form.Control className='inputStyle' type='password' ref={passwordConfirmRef} required />
+								<Form.Label className='labelStyle'>
+									Bevestig wachtwoord
+								</Form.Label>
+								<Form.Control
+									className='inputStyle'
+									type='password'
+									ref={passwordConfirmRef}
+									required
+								/>
 							</div>
 						</Form.Group>
 						<Button disabled={loading} className='btnLogin' type='submit'>
@@ -67,10 +97,10 @@ export default function Signup() {
 					</Form>
 				</Card.Body>
 			</Card>
-			<TextLink 
-				text="Heb je al een account? " 
-				link="/Login"
-				linkLabel="Log in"
+			<TextLink
+				text='Heb je al een account? '
+				link='/Login'
+				linkLabel='Log in'
 			/>
 			<style jsx>{`
 				.formStyle {
@@ -119,7 +149,7 @@ export default function Signup() {
 				}
 
 				.wachtwoord {
-					color: #FFFFFF;
+					color: #ffffff;
 					display: flex;
 					align-content: flex-end;
 				}

@@ -13,10 +13,6 @@ export function AuthProvider({ children }) {
 	const [loading, setLoading] = useState(true);
 
 	function signup(email, password) {
-		const db = firebase.firestore();
-		db.collection("users").add({
-			email: email,
-		});
 		return auth.createUserWithEmailAndPassword(email, password);
 	}
 
