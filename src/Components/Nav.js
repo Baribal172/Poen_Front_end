@@ -18,50 +18,48 @@ const Nav = () => {
 					/>
 				</label>
 				<div className='links'>
-					<Router>
 						<Link onClick={() => setOpen(!open)} to='/profile'>
 							<li>
 								<img src='profielIcon.svg' />
 								<a>Profiel</a>
 							</li>
 						</Link>
-						<Link to='/'>
+						<Link onClick={() => setOpen(!open)} to='/'>
 							<li>
 								<img src='homeIcon.svg' />
 								<a>Home</a>
 							</li>
 						</Link>
-						<Link to='/goals'>
+						<Link onClick={() => setOpen(!open)} to='/goals'>
 							<li>
 								<img src='doelenIcon.svg' />
 								<a>Doelen</a>
 							</li>
 						</Link>
-						<Link to='/budget'>
+						<Link onClick={() => setOpen(!open)} to='/budget'>
 							<li>
 								<img src='budgetIcon.svg' />
 								<a>Budget</a>
 							</li>
 						</Link>
-						<Link hrtoef='/tips'>
+						<Link onClick={() => setOpen(!open)} to='/tips'>
 							<li>
 								<img src='tipsIcon.svg' />
 								<a>Tips</a>
 							</li>
 						</Link>
-						<Link to='/settings'>
+						<Link onClick={() => setOpen(!open)} to='/settings'>
 							<li>
 								<img src='settingsIcon.svg' />
 								<a>Instellingen</a>
 							</li>
 						</Link>
-						<Link to='/'>
+						<Link onClick={() => setOpen(!open)} to='/'>
 							<li>
 								<img src='uitloggenIcon.svg' />
 								<a>Uitloggen</a>
 							</li>
 						</Link>
-					</Router>
 				</div>
 			</ul>
 			<div className='menu'>

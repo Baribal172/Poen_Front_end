@@ -24,13 +24,16 @@ import SavingPage from "./Pages/SavingPage";
 import DataPage from "./Pages/DataPage";
 import DoelInstellen from "./Pages/DoelInstellen";
 import BudgetInstellen from "./Pages/BudgetInstellen";
+import TipsBudget from "./Pages/TipsBudget";
+import TipsCijfers from "./Pages/TipsCijfers";
+import TipsSparen from "./Pages/TipsSparen";
+import TipsFG from "./Pages/TipsFG";
 function App() {
 	return (
 		<div className='App'>
 			<AuthProvider>
 				<Router>
 					<Link to='/'>Home</Link>
-					<Link to='/profile'>Profiel</Link>
 					<Link to='/goals'>Doelen</Link>
 					<Link to='/budget'>Budget</Link>
 					<Link to='/settings'>Settings</Link>
@@ -52,6 +55,11 @@ function App() {
 						<PrivateRoute exact path='/housing' component={HousingPage} />
 						<PrivateRoute exact path='/saving' component={SavingPage} />
 						<PrivateRoute exact path='/data' component={DataPage} />
+						<PrivateRoute exact path='/tipsBudget' component={TipsBudget} />
+						<PrivateRoute exact path='/tipsCijfers' component={TipsCijfers} />
+						<PrivateRoute exact path='/tipsSparen' component={TipsSparen} />
+						<PrivateRoute exact path='/tipsFG' component={TipsFG} />
+						<PrivateRoute exact path='/profile' component={ProfilePage} />
 						<PrivateRoute
 							exact
 							path='/doelInstellen'

@@ -10,7 +10,8 @@ const BudgetInstellen = () => {
     return ( 
         <>
         <Container>
-            <PrevIcon />
+            <PrevIcon 
+            link="/"/>
             <Nav />
             <div className="doel">
             <h1>Budget</h1>

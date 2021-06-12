@@ -1,5 +1,8 @@
-const Card = ({ label, text, height}) => {
+import { Link } from "react-router-dom";
+
+const Card = ({ link, label, text, height}) => {
     return ( 
+        <Link to={link}>
         <div className="card">
             <h3 className="label">{label}</h3>
             <p className="cardText">{text}</p>
@@ -28,6 +31,7 @@ const Card = ({ label, text, height}) => {
 
         `}</style>
         </div>
+        </Link>
      );
 }
  
