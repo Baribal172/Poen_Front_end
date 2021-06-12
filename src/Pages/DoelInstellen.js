@@ -10,7 +10,8 @@ const DoelInstellen = () => {
     return ( 
         <>
         <Container>
-            <PrevIcon />
+            <PrevIcon 
+            link="/"/>
             <Nav/>
             <div className="doel">
             <h1>Doel instellen</h1>
