@@ -34,6 +34,7 @@ const Button = ({ link, btnLabel}) => {
                 align-items: center;
                 margin-bottom: 20px;
                 border: none;
+                z-index: 900;
             }
 
 		`}</style>

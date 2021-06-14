@@ -7,6 +7,7 @@ import PrimaryText from "../Components/PrimaryText";
 import Container from "../Components/Container";
 import TextLink from "../Components/TextLink";
 import firebase from "../firebase";
+import LayoutBlue from "../Components/LayoutBlue";
 import { auth } from "../firebase";
 import "firebase/firestore";
 export default function Signup() {
@@ -46,6 +47,7 @@ export default function Signup() {
 	}
 
 	return (
+		<LayoutBlue>
 		<Container>
 			<Card>
 				<Card.Body>
@@ -155,5 +157,6 @@ export default function Signup() {
 				}
 			`}</style>
 		</Container>
+		</LayoutBlue>
 	);
 }

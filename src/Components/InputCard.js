@@ -5,7 +5,7 @@ const InputCard = ({ inputLabel, type, id, name }) => {
 			<input className="inputStyle" type={type} id={id} name={name} />
             <style jsx>{`
 				.inputCard {
-                    width: 100%;
+                    width: 335px;
                     height: 60px;
                     border-radius: 10px;
                     display: flex;
@@ -14,6 +14,9 @@ const InputCard = ({ inputLabel, type, id, name }) => {
                     padding: 20px;
                     margin-bottom: 13px;
                     background-color: #FFF;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.12);
+                    z-index: 900;
+                    position: absolute;
                 }
 
                 .labelStyle {

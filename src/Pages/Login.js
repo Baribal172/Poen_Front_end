@@ -28,7 +28,7 @@ const Inloggen = () => {
 		
 		<style jsx>{`
 		.background {
-			height: 100%;
+			height: 100vh;
 			background-color: #006FFF;
 		}
 		`}</style>

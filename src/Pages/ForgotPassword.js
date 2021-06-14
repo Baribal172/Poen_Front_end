@@ -6,6 +6,7 @@ import PrimaryTitle from "../Components/PrimaryTitle";
 import PrimaryText from "../Components/PrimaryText";
 import Container from "../Components/Container";
 import Nav from "../Components/Nav";
+import LayoutBlue from "../Components/LayoutBlue";
 
 export default function ForgotPassword() {
 	const emailRef = useRef();
@@ -31,6 +32,7 @@ export default function ForgotPassword() {
 	}
 
 	return (
+		<LayoutBlue>
 		<Container>
 			<Card>
 				<Card.Body>
@@ -104,5 +106,6 @@ export default function ForgotPassword() {
 				}
 			`}</style>
 		</Container>
+		</LayoutBlue>
 	);
 }
