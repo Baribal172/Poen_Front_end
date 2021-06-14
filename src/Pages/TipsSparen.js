@@ -15,11 +15,11 @@ const TipsSparen = () => {
                title="Tips" />
              <h5 className="subTitle">Sparen</h5>
              <div className="card">
-                    <li>Leg eerst een <span>spaarpotje</span> aan voor onvoorziene kosten en begin daarna pas te sparen voor die grote reis die je al zo lang wil maken.</li>
-                    <li>Hou een <span>doel</span> voor ogen.</li>
-                    <li>Probeer wat vaker de <span>fiets</span> te nemen in plaats van de auto. Je bespaart benzine en het is beter voor het milieu</li>
-                    <li>Profiteer van <span>kortingen</span> en speciale aanbiedingen.</li>
-                    <li>Denk eens na over <span>beleggen</span></li>
+                    <li className="listTips">Leg eerst een <span>spaarpotje</span> aan voor onvoorziene kosten en begin daarna pas te sparen voor die grote reis die je al zo lang wil maken.</li>
+                    <li className="listTips">Hou een <span>doel</span> voor ogen.</li>
+                    <li className="listTips">Probeer wat vaker de <span>fiets</span> te nemen in plaats van de auto. Je bespaart benzine en het is beter voor het milieu</li>
+                    <li className="listTips">Profiteer van <span>kortingen</span> en speciale aanbiedingen.</li>
+                    <li className="listTips">Denk eens na over <span>beleggen</span></li>
                 </div>
             </Container>
             <style jsx>{`
@@ -40,7 +40,7 @@ const TipsSparen = () => {
                 margin-top: 15px;
             }
 
-            li {
+            .listTips{
                 margin-bottom: 20px;
             }
             span {

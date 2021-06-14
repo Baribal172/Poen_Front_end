@@ -15,16 +15,16 @@ const TipsCijfers = () => {
                title="Tips" />
                <h5 className="subTitle">Gemiddelde uitgaven</h5>
                <div className="card">
-                   <p>Hieronder vind je de <span>cijfers</span> per maand van leeftijdsgenoten studenten die thuis <span>(T)</span> of alleen <span>(A)</span> wonen:</p>
-                    <li><span>Huur</span>: T: €0 / A: €450</li>
-                    <li><span>Studeren</span>: T: €230 / A: €230</li>
-                    <li><span>Boodschappen</span>: T: €31.5 / A: €184.25</li>
-                    <li><span>Sport/Uitgaan</span>: T: €130 / A: €134</li>
-                    <li><span>Shoppen</span>: €56.5 / A: €52.5</li>
-                    <li><span>Vervoer</span>: T: €100 / A: €100</li>
-                    <li><span>Abbo/Gamen</span>: T: €29 / A: €38</li>
-                    <li><span>Telefoon</span>: T: €25 / A: €30</li>
-                    <li><span>Overige</span>: T: €40 / A: €48</li>
+                   <p className="textTips">Hieronder vind je de <span>cijfers</span> per maand van leeftijdsgenoten studenten die thuis <span>(T)</span> of alleen <span>(A)</span> wonen:</p>
+                    <li className="listTips"><span>Huur</span>: T: €0 / A: €450</li>
+                    <li className="listTips"><span>Studeren</span>: T: €230 / A: €230</li>
+                    <li className="listTips"><span>Boodschappen</span>: T: €31.5 / A: €184.25</li>
+                    <li className="listTips"><span>Sport/Uitgaan</span>: T: €130 / A: €134</li>
+                    <li className="listTips"><span>Shoppen</span>: €56.5 / A: €52.5</li>
+                    <li className="listTips"><span>Vervoer</span>: T: €100 / A: €100</li>
+                    <li className="listTips"><span>Abbo/Gamen</span>: T: €29 / A: €38</li>
+                    <li className="listTips"><span>Telefoon</span>: T: €25 / A: €30</li>
+                    <li className="listTips"><span>Overige</span>: T: €40 / A: €48</li>
                 </div>
             </Container>
             <style jsx>{`
@@ -45,14 +45,13 @@ const TipsCijfers = () => {
                 margin-top: 15px;
             }
 
-            li {
+            .listTips {
                 margin-bottom: 20px;
             }
 
-            p {
+            .textTips {
                 margin: 20px 0;
             }
-
             span {
                 color: #006FFF;
             }

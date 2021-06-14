@@ -15,10 +15,10 @@ const TipsBudget = () => {
                title="Tips" />
                <h5 className="subTitle">Budget verdelen</h5>
                 <div className="card">
-                    <li>Gebruik de <span>50/30/20 regel. 50%</span> essentiële zaken zoals voedsel, onderdak, water en energie. <span>30%</span> wensen, entertainment en luxeproducten. <span>20%</span> sparen en schuldaflossing.</li>
-                    <li>Denk op <span>lange(re) termijn.</span></li>
-                    <li>Wees <span>voorbereid</span> op onvoorziene en grote uitgaven.</li>
-                    <li>Hou een <span>kalender</span> bij met je vaste of geplande uitgaven.</li>
+                    <li className="listTips">Gebruik de <span>50/30/20 regel. 50%</span> essentiële zaken zoals voedsel, onderdak, water en energie. <span>30%</span> wensen, entertainment en luxeproducten. <span>20%</span> sparen en schuldaflossing.</li>
+                    <li className="listTips">Denk op <span>lange(re) termijn.</span></li>
+                    <li className="listTips">Wees <span>voorbereid</span> op onvoorziene en grote uitgaven.</li>
+                    <li className="listTips">Hou een <span>kalender</span> bij met je vaste of geplande uitgaven.</li>
                 </div>
             </Container>
             <style jsx>{`
@@ -39,7 +39,7 @@ const TipsBudget = () => {
                 margin-top: 15px;
             }
 
-            li {
+            .listTips {
                 margin-bottom: 20px;
             }
             span {
