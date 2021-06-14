@@ -15,9 +15,12 @@ import TargetCard from "../Components/TargetCard";
 import BudgetCard from "../Components/BudgetCard";
 import FinanceData from "../Components/FinanceData";
 import TransactieCard from "../Components/TransactieCard";
+import firebase from "../firebase";
+import "firebase/firestore";
 
 export default function Home() {
 	const [error, setError] = useState("");
+	const [goals, setGoals] = useState();
 	const { currentUser, logout } = useAuth();
 	const history = useHistory();
 	async function handleLogout() {
@@ -30,69 +33,52 @@ export default function Home() {
 			setError("Failed to log out");
 		}
 	}
+	var user = firebase.auth().currentUser;
+	const db = firebase.firestore();
+	var docRef = db.collection("users");
+	console.log(docRef);
+	console.log(user.uid);
 
 	return (
 		<>
-		<Container>
-			<PageTitle
-				title="Home"
-			/>
-			<Nav/>
-			<Balans 
-				infoBalans="gespaard geld"
-				balans="€656,00"
-			/>
-			<TargetButton
-				btnLabel="Nieuw doel" />
-			<TargetCard
-				target="Volkswagen golf"
-				image="/volkswagen-golf.png"
-				gespaard="€1875,00"
-				doel="€2500,00"			
-			/>
-			<BudgetCard 
-				budget="€575,00"
-				budgetInfo="Is je huidig ingestelde budget."
-			/>
-
-			
-			
-		</Container>
-		<FinanceData
-		uitgaven="€154,00"
-		overig="€421,00"
-		/>
-		
-		<div className="advies">
 			<Container>
-				<TransactieCard 
-				transactie="Winkelen"
-				kosten="€86,00"
+				<PageTitle title='Home' />
+				<Nav />
+				<Balans infoBalans='gespaard geld' balans='€656,00' />
+				<TargetButton btnLabel='Nieuw doel' />
+				<TargetCard
+					target='Volkswagen golf'
+					image='/volkswagen-golf.png'
+					gespaard='€1875,00'
+					doel='€2500,00'
 				/>
-
-				<TransactieCard 
-				transactie="Eten"
-				kosten="€43,00"
+				<BudgetCard
+					budget='€575,00'
+					budgetInfo='Is je huidig ingestelde budget.'
 				/>
-
-				<TransactieCard 
-				transactie="Roken"
-				kosten="€25,00"
-				/>
-
 			</Container>
-        </div>
-		{/*
+			<FinanceData uitgaven='€154,00' overig='€421,00' />
+
+			<div className='advies'>
+				<Container>
+					<TransactieCard transactie='Winkelen' kosten='€86,00' />
+
+					<TransactieCard transactie='Eten' kosten='€43,00' />
+
+					<TransactieCard transactie='Roken' kosten='€25,00' />
+				</Container>
+			</div>
+			{/*
 		<Button variant='link' onClick={handleLogout}>
 			Log Out
 		</Button> */}
-		<style jsx>{`
-            .advies {
-				padding-top: 20px;
-                background-color: #006FFF;
-                height: 50vh;
-            }
-		`}</style>
+			<style jsx>{`
+				.advies {
+					padding-top: 20px;
+					background-color: #006fff;
+					height: 50vh;
+				}
+			`}</style>
 		</>
 	);
 }
