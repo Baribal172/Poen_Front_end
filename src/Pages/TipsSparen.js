@@ -13,7 +13,16 @@ const TipsSparen = () => {
                <Nav/>
                <PageTitle
                title="Tips" />
+             <h5 className="subTitle">Sparen</h5>
             </Container>
+            <style jsx>{`
+            .subTitle {
+                font-size: 26px;
+                color: #2F3031;
+                margin: 20px 0;
+            }
+            `}</style>
+        
         </Layout>
      );
 }

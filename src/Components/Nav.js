@@ -1,8 +1,23 @@
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import React, { useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
+import { useHistory } from "react-router-dom";
 
 const Nav = () => {
+	const [error, setError] = useState("");
 	const [open, setOpen] = useState(false);
+	const { currentUser, logout } = useAuth();
+	const history = useHistory();
+	async function handleLogout() {
+		setError("");
+
+		try {
+			await logout();
+			history.push("/login");
+		} catch {
+			setError("Failed to log out");
+		}
+	}
 	return (
 		<nav>
 			<ul
@@ -54,7 +69,7 @@ const Nav = () => {
 								<a>Instellingen</a>
 							</li>
 						</Link>
-						<Link onClick={() => setOpen(!open)} to='/'>
+						<Link variant='link' onClick={handleLogout}>
 							<li>
 								<img src='uitloggenIcon.svg' />
 								<a>Uitloggen</a>
@@ -130,7 +145,6 @@ const Nav = () => {
 				}
 
 				.icon-burger {
-					background-color: var(--green);
 					width: 45px;
 					height: 45px;
 					border-radius: 50%;
@@ -151,7 +165,10 @@ const Nav = () => {
 				}
 
 				.close {
-					width: 20px;
+					position: absolute;
+					top: 6px;
+					right: 32px;
+					width: 25px;
 					cursor: pointer;
 				}
 			`}</style>

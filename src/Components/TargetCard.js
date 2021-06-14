@@ -39,6 +39,7 @@ const TargetCard = ({ target, image, gespaard, doel }) => {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                 
                 }
 			`}</style>
         </div>

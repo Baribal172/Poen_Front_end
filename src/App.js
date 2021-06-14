@@ -33,11 +33,6 @@ function App() {
 		<div className='App'>
 			<AuthProvider>
 				<Router>
-					<Link to='/'>Home</Link>
-					<Link to='/goals'>Doelen</Link>
-					<Link to='/budget'>Budget</Link>
-					<Link to='/settings'>Settings</Link>
-					<Link to='/tips'>Tips</Link>
 					<Switch>
 						<PrivateRoute exact path='/profile' component={ProfilePage} />
 						<PrivateRoute

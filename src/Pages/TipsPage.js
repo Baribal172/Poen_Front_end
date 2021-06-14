@@ -13,12 +13,20 @@ export default function TipsPage() {
 				title="Tips"
 			/>
 			<Nav/>
-			<PrimaryText text="Hieronder vind je enkele thema's waarover je tips kan krijgen. Klik op de thema's om de tips te zien." />
+			<p className="primaryText">Hieronder vind je enkele thema's waarover je tips kan krijgen. Klik op de thema's om de tips te zien.</p>
 			<Card link="/tipsBudget" label="Budget verdelen" text="Bekijk hier onze tips om je budget beter te leren plannen, verdelen." />
 			<Card link="/tipsCijfers" label="Gemiddelde cijfers" text="Bekijk het gemiddelde uitgavenpatroon van leeftijdsgenoten, studenten, ..." />
 			<Card link="/tipsSparen" label="Spaartips" text="Hoe kan je het best sparen? Waarom zou ik sparen? Bekijk het hier! " />
 			<Card link="/tipsFG" label="Financiële geletterdheid" text="De cijfers omtrent financiële geletterdheid bij jongeren blijven dalen. Wat is dat?" />
 		</Container>
+		<style jsx>{`
+            .primaryText {
+				margin-top: 90px;
+				margin-bottom: 40px;
+				font-size: 16px;
+			}
+            `}</style>
+        
 		</Layout>
 	);
 }
