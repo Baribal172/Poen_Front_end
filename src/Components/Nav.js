@@ -33,16 +33,16 @@ const Nav = () => {
 					/>
 				</label>
 				<div className='links'>
-						<Link onClick={() => setOpen(!open)} to='/profile'>
-							<li>
-								<img src='profielIcon.svg' />
-								<a>Profiel</a>
-							</li>
-						</Link>
 						<Link onClick={() => setOpen(!open)} to='/'>
 							<li>
 								<img src='homeIcon.svg' />
 								<a>Home</a>
+							</li>
+						</Link>
+						<Link onClick={() => setOpen(!open)} to='/profile'>
+							<li>
+								<img src='profielIcon.svg' />
+								<a>Profiel</a>
 							</li>
 						</Link>
 						<Link onClick={() => setOpen(!open)} to='/goals'>
