@@ -112,7 +112,7 @@ const Nav = () => {
 					background-color: #006fff;
 					transform: translateX(-500px);
 					transition: 0s;
-					z-index: 499;
+					z-index: 999;
 				}
 
 				.links {

@@ -7,7 +7,7 @@ const PrimaryTitle = ({title, color}) => {
 
         <style jsx>{`
         .title {
-            margin-top: 140px;
+            padding-top: 140px;
             font-size: 52px;
             color: ${color};
         }

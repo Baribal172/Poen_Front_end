@@ -18,7 +18,7 @@ const DataPage = () => {
                     <DataCard label="Nee" color="#FF2266"/>
                 </div>
                 <ArrowButtonPrev link="/saving" />
-                <ArrowButtonNext link="/home" />
+                <ArrowButtonNext link="/bankLinken" />
         </Container>
         <style jsx>{`
         .grid {

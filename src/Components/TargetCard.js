@@ -22,6 +22,8 @@ const TargetCard = ({ target, image, gespaard, doel }) => {
                     border-radius: 10px;
                     padding: 10px;
                     margin-top: 15px;
+                    position: relative;
+                    z-index: 900;
                 }
 
                 .target-flex {

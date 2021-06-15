@@ -28,6 +28,11 @@ import TipsBudget from "./Pages/TipsBudget";
 import TipsCijfers from "./Pages/TipsCijfers";
 import TipsSparen from "./Pages/TipsSparen";
 import TipsFG from "./Pages/TipsFG";
+import OverOns from "./Pages/OverOns";
+import Bank from "./Pages/Bank";
+import Privacy from "./Pages/Privacy";
+import Contact from "./Pages/Contact";
+import Budget from "./Pages/Budget";
 function App() {
 	return (
 		<div className='App'>
@@ -41,7 +46,8 @@ function App() {
 							component={UpdateProfile}
 						/>
 						<PrivateRoute exact path='/goals' component={GoalsPage} />
-						<PrivateRoute exact path='/budget' component={BudgetPage} />
+						<PrivateRoute exact path='/budgetPage' component={BudgetPage} />
+						<PrivateRoute exact path='/budget' component={Budget} />
 						<PrivateRoute exact path='/settings' component={SettingsPage} />
 						<PrivateRoute exact path='/tips' component={TipsPage} />
 						<PrivateRoute exact path='/intro' component={Intro} />
@@ -55,6 +61,10 @@ function App() {
 						<PrivateRoute exact path='/tipsSparen' component={TipsSparen} />
 						<PrivateRoute exact path='/tipsFG' component={TipsFG} />
 						<PrivateRoute exact path='/profile' component={ProfilePage} />
+						<PrivateRoute exact path='/overOns' component={OverOns} />
+						<PrivateRoute exact path='/bank' component={Bank} />
+						<PrivateRoute exact path='/privacy' component={Privacy} />
+						<PrivateRoute exact path='/contact' component={Contact} />
 						<PrivateRoute
 							exact
 							path='/doelInstellen'
