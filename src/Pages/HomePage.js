@@ -1,7 +1,7 @@
 import { globalStyles } from "../styles/global";
 //import Button from "../Components/Button";
 import Container from "../Components/Container";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Alert } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useAuth } from "../contexts/AuthContext";
@@ -20,12 +20,28 @@ import "firebase/firestore";
 
 export default function Home() {
 	const [error, setError] = useState("");
-	const [goals, setGoals] = useState();
 	const { currentUser, logout } = useAuth();
+	var UID = firebase.auth().currentUser.uid;
+	const db = firebase.firestore();
+	// var docRef = db.collection("users").doc(UID).collection("Goals");
+	const [goals, setGoals] = useState([]);
+	const [user, setUser] = useState();
 	const history = useHistory();
+	useEffect(() => {
+		const fetchData = async () => {
+			const db = firebase.firestore();
+			const data = await db
+				.collection("users")
+				.doc(UID)
+				.collection("Goals")
+				.get();
+			setGoals(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+		};
+		fetchData();
+	}, []);
+
 	async function handleLogout() {
 		setError("");
-
 		try {
 			await logout();
 			history.push("/login");
@@ -33,11 +49,6 @@ export default function Home() {
 			setError("Failed to log out");
 		}
 	}
-	var user = firebase.auth().currentUser;
-	const db = firebase.firestore();
-	var docRef = db.collection("users");
-	console.log(docRef);
-	console.log(user.uid);
 
 	return (
 		<>
@@ -46,12 +57,19 @@ export default function Home() {
 				<Nav />
 				<Balans infoBalans='gespaard geld' balans='€656,00' />
 				<TargetButton btnLabel='Nieuw doel' />
-				<TargetCard
-					target='Volkswagen golf'
-					image='/volkswagen-golf.png'
-					gespaard='€1875,00'
-					doel='€2500,00'
-				/>
+				{goals ? (
+					goals.map((goal) => (
+						<TargetCard
+							key={goal.goal_price}
+							target={goal.goal_name}
+							image='/volkswagen-golf.png'
+							gespaard={goal.goal_status}
+							doel={goal.goal_price}
+						/>
+					))
+				) : (
+					<p>Je hebt nog geen doelen ingesteld</p>
+				)}
 				<BudgetCard
 					budget='€575,00'
 					budgetInfo='Is je huidig ingestelde budget.'
