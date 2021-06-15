@@ -79,11 +79,11 @@ export default function Home() {
 
 			<div className='advies'>
 				<Container>
-					<TransactieCard transactie='Winkelen' kosten='€86,00' />
+					<TransactieCard icon="/winkelenIcon.svg" transactie='Winkelen' kosten='€86,00' />
 
-					<TransactieCard transactie='Eten' kosten='€43,00' />
+					<TransactieCard icon="/etenIcon.svg" transactie='Eten' kosten='€43,00' />
 
-					<TransactieCard transactie='Roken' kosten='€25,00' />
+					<TransactieCard icon="/RokenIcon.svg" transactie='Roken' kosten='€25,00' />
 				</Container>
 			</div>
 			{/*

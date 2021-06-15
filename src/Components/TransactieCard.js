@@ -1,9 +1,9 @@
-const TransactieCard = ({transactie, kosten}) => {
+const TransactieCard = ({icon, transactie, kosten}) => {
     return ( 
        
         <div className="transactieCard">
             <div className="iconTransactie">
-            <img src="/winkelenIcon.svg" />
+            <img className="iconSvg" src={icon} />
             </div>
             <div className="transactie">
                 <h4>{transactie}</h4>
@@ -38,6 +38,11 @@ const TransactieCard = ({transactie, kosten}) => {
                     align-items: center;
                     color: #fff;
                 }
+
+                .iconSvg (
+                    width: 10px;
+                    
+                )
 
                 .budget {
                     margin-left: 20px;
