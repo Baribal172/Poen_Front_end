@@ -32,6 +32,7 @@ const CardCategorie = ({ icon, categorieName}) => {
         .icon {
             max-width: 40px;
             color: #006FFF;
+            fill: #fff;
         }
 
         .categorieName {
@@ -40,6 +41,18 @@ const CardCategorie = ({ icon, categorieName}) => {
             text-align: center;
             margin-top: 10px;
         }
+
+        .card:focus,
+        .card:hover{
+        background-color: #006CFA;
+        fill: #fff;
+        }
+
+        .categorieName:focus,
+        .categorieName:hover {
+        color: #fff;
+        }
+
 
         `}</style>
         </div>

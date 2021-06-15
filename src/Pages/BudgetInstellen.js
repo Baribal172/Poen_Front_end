@@ -55,7 +55,7 @@ const BudgetInstellen = () => {
 
         .advies {
                 background-color: #006FFF;
-                height: 38vh;
+                height: 40vh;
             }
         `}</style>
         
