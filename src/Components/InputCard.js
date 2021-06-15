@@ -16,7 +16,6 @@ const InputCard = ({ inputLabel, type, id, name }) => {
                     background-color: #FFF;
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.12);
                     z-index: 900;
-                    position: absolute;
                 }
 
                 .labelStyle {

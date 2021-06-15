@@ -37,7 +37,7 @@ export default function Signup() {
 					});
 				}
 			);
-			history.push("/");
+			history.push("/gender");
 		} catch (error) {
 			console.log(error);
 			setError("Failed to create an account", error);

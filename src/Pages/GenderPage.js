@@ -16,7 +16,7 @@ const GenderPage = () => {
                 <GenderCard gender="/manIcon.svg" genderLabel="Man" color="#006FFF"/>
                 <GenderCard gender="/vrouwIcon.svg" genderLabel="Vrouw" color="#FF2266"/>
             </div>
-            <ArrowButtonNext link="/age" />
+            <ArrowButtonNext link="/housing" />
         </Container>
         <style jsx>{`
         .grid {
