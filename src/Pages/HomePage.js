@@ -57,7 +57,7 @@ export default function Home() {
 				<Nav />
 				<Balans infoBalans='gespaard geld' balans='€656,00' />
 				<TargetButton btnLabel='Nieuw doel' />
-				{goals ? (
+				{goals.length > 0 ? (
 					goals.map((goal) => (
 						<TargetCard
 							key={goal.goal_price}
