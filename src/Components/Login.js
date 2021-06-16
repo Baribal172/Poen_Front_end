@@ -16,12 +16,13 @@ export default function Login() {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
-
+		console.log("login start");
 		try {
 			setError("");
 			setLoading(true);
 			await login(emailRef.current.value, passwordRef.current.value);
-			history.push("/");
+			console.log("login succesvol");
+			history.push("/home");
 		} catch {
 			setError("Failed to log in");
 		}
@@ -120,7 +121,7 @@ export default function Login() {
 				}
 
 				.wachtwoord {
-					color: #FFFFFF;
+					color: #ffffff;
 					display: flex;
 					align-content: flex-end;
 				}
