@@ -39,7 +39,7 @@ const Nav = () => {
 								<a>Home</a>
 							</li>
 						</Link>
-						<Link onClick={() => setOpen(!open)} to='/profile'>
+						<Link onClick={() => setOpen(!open)} to='/update-profile'>
 							<li>
 								<img src='profielIcon.svg' />
 								<a>Profiel</a>
