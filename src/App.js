@@ -77,6 +77,7 @@ function App() {
 						/>
 						<Route path='/register' component={Register}></Route>
 						<Route path='/login' component={Login}></Route>
+						<Route path='/' component={Login}></Route>
 						<PrivateRoute exact path='/bankLinken' component={BankLinken} />
 						<Route path='/forgot-password' component={ForgotPassword}></Route>
 						<PrivateRoute exact path='/home' component={HomePage} />
