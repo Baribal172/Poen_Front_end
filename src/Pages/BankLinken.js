@@ -42,7 +42,7 @@ const BankLinken = () => {
                   id="rekeningnummer"
                   name="rekeningnummer" />
 
-            <Link to="/">
+            <Link to="https://link.tink.com/1.0/account-check/?client_id=458b97a9a9cf463daffe5c374b50324a&redirect_uri=https%3A%2F%2Fpoen-7fa31.web.app%2F&market=FR&locale=en_US&test=true">
             <Button className='btnLogin'>
 			Link je bankrekening
 		</Button>

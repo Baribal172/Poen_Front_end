@@ -62,7 +62,7 @@ export default function Home() {
 						<TargetCard
 							key={goal.goal_price}
 							target={goal.goal_name}
-							image='/volkswagen-golf.png'
+							image='./volkswagen-golf.png'
 							gespaard={goal.goal_status}
 							doel={goal.goal_price}
 						/>

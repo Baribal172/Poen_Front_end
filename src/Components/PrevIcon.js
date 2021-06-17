@@ -4,7 +4,7 @@ const PrevIcon = ({link}) => {
     return ( 
         <Link to={link}>
         <div className="prevIcon">
-            <img src="/prevIcon.png" />
+            <img src="./prevIcon.png" />
         
         <style jsx>{`
             .prevIcon {
