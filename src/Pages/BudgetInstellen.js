@@ -36,7 +36,7 @@ const BudgetInstellen = () => {
 					budget.map((budget) => (
 						<Balans
 							infoBalans='Resterend budget'
-							balans={budget.budget_price}
+							balans={"€" + budget.budget_price}
 						/>
 					))
 				) : (
