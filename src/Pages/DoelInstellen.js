@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import AdviesBalk from "../Components/AdviesBalk";
 import Container from "../Components/Container";
 import InputCard from "../Components/InputCard";
@@ -49,7 +49,6 @@ export default function DoelInstellen() {
 							/>
 						</div>
 					</Form.Group> */}
-
 					<Form.Group id='doel'>
 						<div className='formStyle'>
 							<Form.Label className='labelStyle'>
